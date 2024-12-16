@@ -1,14 +1,15 @@
 package site.jvdz.practice.pokemon.models.types;
+import site.jvdz.practice.pokemon.interfaces.Moves; 
 import site.jvdz.practice.pokemon.interfaces.Pokemon;
 
-public class GrassPokemon extends Pokemon {
-	private String strength;
-	private String weakness;
+public class GrassPokemon extends Pokemon implements Moves {
+	private final String strength;
+	private final String weakness;
 
-	public GrassPokemon (String name, int hp, int EvolutionStage, double weight, double height, String sound, String Strength, String weakness) {
+	public GrassPokemon (String name, int hp, int EvolutionStage, double weight, double height, String sound) {
 		super(name, hp, EvolutionStage, weight, height, sound);
-		this.strength = strength;
-		this.weakness = weakness;
+		this.strength = "Water, Fighting";
+		this.weakness = "Fire";
 	}
 
 
@@ -27,6 +28,11 @@ public class GrassPokemon extends Pokemon {
 		System.out.println(getName() + " traps the enemy with a Vine Whip!");
 	}
 
+	@Override
+	public void bonusMove() {
+		System.out.println(getName() + " uses a powerful Solar Beam!");
+	}
+
 	public void typeBonus() {
 		System.out.println("Grass type bonus activated: Healing over time!");
 	}
@@ -36,15 +42,9 @@ public class GrassPokemon extends Pokemon {
 		return strength;
 	}
 
-	public void setStrength(String Strength) {
-		this.strength = strength;
-	}
-
 	public String getWeakness() {
 		return weakness;
 	}
 
-	public void setWeakness(String weakness) {
-		this.weakness = weakness;
-	}
+
 }

@@ -1,15 +1,15 @@
 package site.jvdz.practice.pokemon.models.types;
-
+import site.jvdz.practice.pokemon.interfaces.Moves;
 import site.jvdz.practice.pokemon.interfaces.Pokemon;
 
-public class ColorlessPokemon extends Pokemon {
-	private String strength;
-	private String weakness;
+public class ColorlessPokemon extends Pokemon implements Moves {
+	private final String strength;
+	private final String weakness;
 
-	public ColorlessPokemon(String name, int hp, int EvolutionStage, double weight, double height, String sound, String strength, String weakness) {
+	public ColorlessPokemon(String name, int hp, int EvolutionStage, double weight, double height, String sound) {
 		super(name, hp, EvolutionStage, weight, height, sound);
-		this.strength = strength;
-		this.weakness = weakness;
+		this.strength = "Geen specifieke strengths (neutral tegen de meeste types).";
+		this.weakness = "Fighting";
 	}
 	@Override
 	public void attack () {
@@ -26,27 +26,25 @@ public class ColorlessPokemon extends Pokemon {
 		System.out.println(getName() + " unleashes a blazing special move!");
 	}
 
-	public void typeBonus () {
+	@Override
+	public void bonusMove() {
+		System.out.println(getName() + " uses a powerful Hyper Beam!");
+	}
+
+	public void typeBonus() {
 		System.out.println("Colorless type bonus activated!");
 	}
 
 	// Getters and Setters for strength and weakness
 
 
-	public String getStrength () {
-		return "No specific strengths, but highly versatile. Versatility: Can use any Energy type for Colorless Energy costs.";
-	}
-
-	public void setStrength(String strength) {
-		this.strength = strength;
-	}
-
-
 	public String getWeakness () {
-		return "Weakness: Colorless type.";
+		return strength;
 	}
 
-	public void setWeakness(String weakness) {
-		this.weakness = weakness;
+	public String getStrength () {
+		return weakness;
 	}
+
+
 }

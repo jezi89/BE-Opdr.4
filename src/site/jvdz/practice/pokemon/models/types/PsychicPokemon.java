@@ -1,14 +1,15 @@
 package site.jvdz.practice.pokemon.models.types;
+import site.jvdz.practice.pokemon.interfaces.Moves; 
 import site.jvdz.practice.pokemon.interfaces.Pokemon;
 
-public class PsychicPokemon extends Pokemon {
-	private String strength;
-	private String weakness;
+public class PsychicPokemon extends Pokemon implements Moves {
+	private final String strength;
+	private final String weakness;
 
-	public PsychicPokemon(String name, int hp, int EvolutionStage, double weight, double height, String sound, String Strength, String weakness) {
+	public PsychicPokemon(String name, int hp, int EvolutionStage, double weight, double height, String sound) {
 		super(name, hp, EvolutionStage, weight, height, sound);
-		this.strength = strength;
-		this.weakness = weakness;
+		this.strength = "Fighting, Other Psychic-types";
+		this.weakness = "Psychic, (Soms geen duidelijk zwak type in oudere sets.)";
 	}
 
 
@@ -27,8 +28,13 @@ public class PsychicPokemon extends Pokemon {
 		System.out.println(getName() + " unleashes a blazing special move!");
 	}
 
+	@Override
+	public void bonusMove() {
+		System.out.println(getName() + " unleashes a mind-bending Psychic Blast!");
+	}
+
 	public void typeBonus() {
-		System.out.println("Psychic type bonus activated!");
+		System.out.println("Psychic type bonus activated! Special attack power increases!");
 	}
 
 	// Getters and Setters for strength and weakness
@@ -36,15 +42,11 @@ public class PsychicPokemon extends Pokemon {
 		return strength;
 	}
 
-	public void setStrength(String Strength) {
-		this.strength = strength;
-	}
+	
 
 	public String getWeakness() {
 		return weakness;
 	}
 
-	public void setWeakness(String weakness) {
-		this.weakness = weakness;
-	}
+
 }

@@ -1,12 +1,10 @@
 package site.jvdz.practice.pokemon.interfaces;
 
-public interface Actionable {
+public interface Moves {
 	void attack();
-
 	void defense();
-
 	void special();
-
+	void bonusMove();
 }
 
 /*	Moves:
