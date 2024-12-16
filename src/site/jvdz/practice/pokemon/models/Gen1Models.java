@@ -1,9 +1,7 @@
+/*
 package site.jvdz.practice.pokemon.models;
 
-import site.jvdz.practice.pokemon.gen1.types.*;
-
-import java.util.Arrays;
-import java.util.List;
+import site.jvdz.practice.pokemon.models.types.*;
 
 public class Gen1Models implements PokemonTypeModel {
 	@Override
@@ -11,7 +9,7 @@ public class Gen1Models implements PokemonTypeModel {
 		return Array.asList(
 				Bug.class,
 				Dragon.class,
-				Electric.class,
+				Lightning.class,
 				Fighting.class,
 				Fire.class,
 				Flying.class,
@@ -27,3 +25,4 @@ public class Gen1Models implements PokemonTypeModel {
 		);
 	}
 }
+*/

@@ -1,20 +1,25 @@
+/*
 package site.jvdz.practice.pokemon.models;
 
-import site.jvdz.practice.pokemon.gen1.types.*;
+import site.jvdz.practice.pokemon.models.types.*;
 
-import java.util.Arrays;
-import java.util.List;
-
+//We kiezen er voor om de pokemon en pokemon types uit de Base2 set te gebruiken: https://bulbapedia.bulbagarden.net/wiki/Base_Set_2_(TCG)
 public class OpdrachtModels implements PokemonTypeModel {
 	@Override
 	public list<Class<?>> getPokemonTypes() {
 		return Array.asList(
 
 		Fire.class,
+
+				Colorless.class,
+				Fighting.class,
 				Fire.class,
-				Water.class,
 				Grass.class,
-				Electric.class
+				Lightning.class,
+				Psychic.class,
+				Water.class
+
 				);
 	}
 }
+*/

@@ -1,4 +1,4 @@
-package site.jvdz.practice.pokemon.actions;
+package site.jvdz.practice.pokemon.services.battle;
 
 public class Battle {
 /*
